@@ -4,7 +4,7 @@ tasks = [i for i in range(1, 21)]
 list = []
 print('此脚本完全免费，仅供学习使用，使用前请查看我的readme.md文档')
 while True:
-    lesson = int(input('请输入你想查询的的课程代码，课程代码在以下目录：Android/data/com.sflep.course/files/data/')
+    lesson = int(input('请输入你想查询的的课程代码，课程代码在以下目录：Android/data/com.sflep.course/files/data/'))
     unit=int(input('请输入你想查询的单元序号(1~8)'))
     task=int(input('请输入你需要查询的任务序号（1~20）'))
     if unit in units:

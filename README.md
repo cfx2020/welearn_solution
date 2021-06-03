@@ -32,4 +32,4 @@
 3. 将下载下来的 welearn_solution.py 文件放入任意目录，最好是根目录，这样方便找，也方便调用，但是会让根目录不美观。
 4. 非root用户可直接跳到第5步，对于安卓11的root用户，在执行第5步之前，需要让termux获取root权限，在终端输入以下命令`pkg install tsu`安装termux su，这是真正的root权限，然后输入tsu进入超级用户模式，此时面具应该会弹出root授权的窗口，如果不是在这就是下一步，点击授权即可。
 5. 在终端输入 `python /storage/emulated/0/welearn_solution.py ` 执行脚本，如果你的文件放在别的目录下，请将文件夹名称加入到 `/storage/emulated/0/` 的后面。![tsu](README.assets/tsu.jpg)
-6. 执行脚本后会弹出提示，让你输入课程代码，课程单元，以及课程任务序号。课程代码是`/storage/emulated/0/Android/data/com.sflep.course/files/data/`的四位数文件夹，例如《全新版大学英语综合教程4》的课程代码是2194，3是2193，具体视情况而定。![lessson](README.assets/lessson-1620573755556.jpg)课程单元就是你想查询的单元序号，第一单元就是1；任务序号就是页面数，第一个任务就是1，这两个序号的范围我限制在1~8和1~20之间，通常英语课本就这么多单元吧🤣，如果有超出的单元或任务，可以自行修改代码范围，在两个for循环的区间的括号内，回车之后，然后就一路顺畅的获得答案。![solution](README.assets/solution.jpg)
+6. 执行脚本后会弹出提示，让你输入课程代码，课程单元，以及课程任务序号。课程代码是`/storage/emulated/0/Android/data/com.sflep.course/files/data/`的四位数文件夹，例如《全新版大学英语综合教程4》的课程代码是2194，3是2193，具体视情况而定。![lessson](README.assets/lessson.jpg)课程单元就是你想查询的单元序号，第一单元就是1；任务序号就是页面数，第一个任务就是1，这两个序号的范围我限制在1-8和1-20之间，通常英语课本就这么多单元吧🤣，如果有超出的单元或任务，可以自行修改代码范围，在两个for循环的区间的括号内，回车之后，然后就一路顺畅的获得答案。![solution](README.assets/solution.jpg)
