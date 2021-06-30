@@ -3,7 +3,7 @@ units=[i for i in range(1,9)]
 tasks=[i for i in range(1,21)]
 list=[]
 print('此脚本完全免费，仅供学习使用，使用前请查看我的welearn_solution.md文档')
-while True:
+while True:      #构建循环
     while True:
         lesson=int(input('请输入你想查询的的课程代码，课程代码在以下目录：Android/data/com.sflep.course/files/data/'))
         unit=int(input('请输入你想查询的单元序号(1~8)'))
@@ -18,16 +18,15 @@ while True:
         
     with open(f'/storage/emulated/0/Android/data/com.sflep.course/files/data/{lesson}/unit_0{unit}/main{task}.html') as main:
         bs1=BeautifulSoup(main,'html.parser')
-        list2=bs1.find_all('input',type='text')
+        list2=bs1.find_all('input',type='text')    #使用bs4查找html的标签
         list1=bs1.find_all('textarea',type='text')
-        list=list1 + list2
-        print(list)
+        list=list1 + list2   #创建列表,合并找到的标签为列表
         print(f'第{unit}单元，第{task}个任务的答案是：')
         for i in list:
             i=str(i)
             bs2=BeautifulSoup(i,'html.parser')
             if 'input' in i:
-                solution1=bs2.input['data-solution']
+                solution1=bs2.input['data-solution']  #找到所有的data_solution的属性
                 print(solution1)
             elif 'textarea' in i:
                 solution1=bs2.textarea['data-solution']
